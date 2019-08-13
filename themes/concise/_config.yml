@@ -1,0 +1,39 @@
+# Header
+menu:
+  首页: /
+  web: /tags/web
+  linux: /tags/linux/
+  跑步: /tags/running
+  关于: /tags/about
+
+# Content
+excerpt_link: 阅读更多
+
+# Sidebar
+author:
+  name: 卫某人
+  work: 青青草原放羊娃
+  location: 青青草原
+  avatar_url: /images/avatar.png
+
+# Links:
+links:
+  - svg: ./source/svg/github.svg
+    url: https://github.com/weisiwu
+  - svg: ./source/svg/twitter.svg
+    url: https://twitter.com/weisiwu
+
+# github comment 
+git_commit:
+  enable: true
+  client_id: Iv1.5bd65eea1b3a3023
+  client_secret: d72ee612c511e91e27371717c9e9e91ae2adbb9a
+  repo: weisiwu.github.io
+  owner: weisiwu
+  admin:
+    - weisiwu
+  per_page: 10
+
+# Miscellaneous
+rss: /atom.xml
+favicon: /images/favicon.ico

@@ -1,0 +1,18 @@
+<div class="comments">
+    <div id="comments"></div>
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+    new Gitalk({
+        clientID: <%- JSON.stringify(theme.git_commit.client_id) %>,
+        clientSecret: <%- JSON.stringify(theme.git_commit.client_secret) %>,
+        repo: <%- JSON.stringify(theme.git_commit.repo) %>,
+        owner: <%- JSON.stringify(theme.git_commit.owner) %>,
+        admin: [<%- theme.git_commit.admin.map(admin => JSON.stringify(admin)).join() %>],
+        id: "<%- _.trim(post.path, '/') %>",
+        distractionFreeMode: true,
+        title: <%- JSON.stringify(post.title) %>,
+        body: <%- JSON.stringify(post.permalink) %>,
+        labels: [<%- post.tags.map(tag => JSON.stringify(tag.name)).join() %>]
+    }).render('comments');
+    </script>
+</div>

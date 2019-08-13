@@ -1,0 +1,15 @@
+<footer class="footer">
+    <%= __('powered_by') %> <a href="http://hexo.io/" target="_blank">Hexo</a>
+
+    <% if( theme.baidu && theme.baidu.id ) { %>
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?<%= theme.baidu.id %>";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <% } %>
+</footer>

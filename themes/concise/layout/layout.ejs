@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+
+    <%
+    var title = page.title;
+    if( is_archive() ) {
+        title = __('archive_a');
+        if( is_month() ) {
+            title += ': ' + page.year + '/' + page.month;
+        } else if( is_year() ) {
+            title += ': ' + page.year;
+        }
+    } else if( is_category() ) {
+            title = __('category') + ': ' + page.category;
+    } else if( is_tag() ) {
+        title = __('tag') + ': ' + page.tag;
+    }
+    %>
+
+    <%
+    var description = config.description;
+    if( is_post() ) {
+        description = _.truncate(strip_html(page.content), {length: 250}).replace(/\n/g, '');
+    }
+    %>
+
+    <title><% if( title ) { %><%= title %> | <% } %><%= config.title %></title>
+    <meta name="author" content="<%= config.author %>" />
+    <meta name="version" content="1.0.0" />
+    <meta name="keywords" content="<%= config.keywords %>" />
+    <meta name="description" content="<%= description %>" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+
+    <% if( theme.rss ) { %>
+    <link rel="alternate" href="<%- theme.rss %>" title="<%= config.title %>" type="application/atom+xml">
+    <% } %>
+    <% if( theme.favicon ) { %>
+    <link rel="icon" href="<%- theme.favicon %>">
+    <% } %>
+
+    <%- css('css/style') %>
+</head>
+<body>
+
+    <main class="app">
+        <%- partial('_partial/header') %>
+        <div id="content" class="content"><%- body %></div>
+        <%- partial('_partial/footer', {}, {cache: true}) %>
+    </main>
+
+    <!-- <script type="text/javascript" src="js/jquery.min.js"></script> -->
+    <%- js('js/jquery.min') %>
+    <script type="text/javascript">
+    $(function() {
+        var nodes = {
+            nav: $('#nav'),
+            aside: $('#aside'),
+            asideInner: $('#aside-inner'),
+            navInner: $('#nav-inner')
+        };
+
+        var doing = false;
+        nodes.asideInner.on('webkitAnimationEnd mozAnimationEnd oAnimationEnd oanimationend animationend', function() {
+            if (nodes.aside.hasClass('mobile-open')) {
+                nodes.aside.removeClass('mobile-open');
+            } else {
+                nodes.aside.removeClass('mobile-close panel-show');
+            }
+            doing = false;
+        });
+        $('#open-panel, #aside-mask').on('click', function() {
+            if (doing) {
+                return;
+            }
+            
+            if (nodes.aside.hasClass('panel-show')) {
+                nodes.aside.addClass('mobile-close');
+            } else {
+                nodes.aside.addClass('mobile-open panel-show');
+            }
+        });
+        $('#open-menus').on('click', function() {
+            nodes.navInner.slideToggle();
+        });
+
+        if (window.innerWidth <= 960) {
+            setTimeout(function() {
+                nodes.navInner.slideUp();
+            }, 3000);
+        }
+    });
+    </script>
+    <% if (is_post()) { %>
+        <script type="text/javascript" src="/js/scrollspy.min.js"></script>
+        <script type="text/javascript">
+        $(document.body).scrollspy({target: '#aside-inner'});
+        </script>
+    <% } %>
+
+</body>
+</html>
