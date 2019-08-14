@@ -26,8 +26,8 @@ links:
 # github comment 
 git_commit:
   enable: true
-  client_id: Iv1.5bd65eea1b3a3023
-  client_secret: d72ee612c511e91e27371717c9e9e91ae2adbb9a
+  client_id: c3af3992520bacebd1c9
+  client_secret: 68a9cac186eb0d7239f42203e5727428ef047a7e
   repo: weisiwu.github.io
   owner: weisiwu
   admin:
