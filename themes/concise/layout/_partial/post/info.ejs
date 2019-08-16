@@ -1,0 +1,21 @@
+<p class="article-<%- type %> article-info-item">
+    <i></i> 
+    <% if (type === 'date') { %>
+        发表于: 
+        <time datetime="<%= date_xml(post.date) %>" itemprop="datePublished"><%= date(post.date, date_format) %></time><%= extra %>
+    <% } else if (type === 'type') { %>
+        分类于: <%- list_tags(name, {
+            style: false,
+            class: 'article-type-item ',
+            separator: ' ',
+            transform(str) {
+                return str + '<em></em>';
+            },
+            show_count: false
+        }) %><%= extra %>
+    <% } else if (type === 'wordcount') { %>
+        字数统计: <%= count %><%= extra %>
+    <% } else if (type === 'times') { %>
+        阅读次数: <%= count %><%= extra %>
+    <% } %>
+</p>

@@ -9,12 +9,7 @@
     <% last = year %>
     <% var month = isMonth ? '/' + post.date.format('MM') : '' %>
     <section class="archives-wrap">
-    <div class="archive-year-wrap">
-    <a href="<%- url_for(config.archive_dir + '/' + year + month) %>" class="page-hd">
-        <%= year + month %>
-    </a>
-    </div>
-    <ol class="archives">
+    <ul class="archives">
     <% } %>
 
     <li class="archive-section-item">
@@ -22,7 +17,7 @@
     </li>
 <% }) %>
 <% if (page.posts.length){ %>
-</ol></section>
+</ul></section>
 <% } %>
 
 <% if (page.total > 1){ %>

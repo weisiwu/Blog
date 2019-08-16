@@ -4,26 +4,28 @@
     <meta charset="UTF-8" />
 
     <%
-    var title = page.title;
-    if( is_archive() ) {
-        title = __('archive_a');
-        if( is_month() ) {
-            title += ': ' + page.year + '/' + page.month;
-        } else if( is_year() ) {
-            title += ': ' + page.year;
+        var title = page.title;
+        if( is_archive() ) {
+            title = __('archive_a');
+            if( is_month() ) {
+                title += ': ' + page.year + '/' + page.month;
+            } else if( is_year() ) {
+                title += ': ' + page.year;
+            }
+        } else if( is_category() ) {
+                title = __('category') + ': ' + page.category;
+        } else if( is_tag() ) {
+            title = __('tag') + ': ' + page.tag;
         }
-    } else if( is_category() ) {
-            title = __('category') + ': ' + page.category;
-    } else if( is_tag() ) {
-        title = __('tag') + ': ' + page.tag;
-    }
     %>
 
     <%
-    var description = config.description;
-    if( is_post() ) {
-        description = _.truncate(strip_html(page.content), {length: 250}).replace(/\n/g, '');
-    }
+        var description = config.description;
+        var className = '';
+        if( is_post() ) {
+            className = 'post-layout';
+            description = _.truncate(strip_html(page.content), {length: 250}).replace(/\n/g, '');
+        }
     %>
 
     <title><% if( title ) { %><%= title %> | <% } %><%= config.title %></title>
@@ -47,11 +49,10 @@
 
     <main class="app">
         <%- partial('_partial/header') %>
-        <div id="content" class="content"><%- body %></div>
+        <div id="content" class="content <%- className %>"><%- body %></div>
         <%- partial('_partial/footer', {}, {cache: true}) %>
     </main>
 
-    <!-- <script type="text/javascript" src="js/jquery.min.js"></script> -->
     <%- js('js/jquery.min') %>
     <script type="text/javascript">
     $(function() {

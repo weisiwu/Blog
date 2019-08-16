@@ -1,4 +1,14 @@
-<header class="header clearfix">
+<%
+    var className = '';
+    var hasAside = true;
+    if( is_post() ) {
+        className = 'post-layout';
+        hasAside = false;
+    }
+%>
+<header class="header clearfix <%- className %>">
     <%- partial('nav') %>
-    <%- partial('aside') %>
+    <% if( hasAside ) { %>
+        <%- partial('aside') %>
+    <% } %>
 </header>

@@ -1,3 +1,6 @@
+# URL
+url: https://weisiwu.github.io/
+
 # Header
 menu:
   首页: /
@@ -20,6 +23,10 @@ author:
 links:
   - svg: ./source/svg/github.svg
     url: https://github.com/weisiwu
+  - svg: ./source/svg/segmentfault.svg
+    url: https://segmentfault.com/u/javascriptuser
+  - svg: ./source/svg/zhihu.svg
+    url: https://www.zhihu.com/people/wei-si-wu/activities
   - svg: ./source/svg/twitter.svg
     url: https://twitter.com/weisiwu
 
@@ -37,3 +44,12 @@ git_commit:
 # Miscellaneous
 rss: /atom.xml
 favicon: /images/favicon.ico
+
+
+# hexo-excerpt plugins
+## https://chekun.me/post/hexo-excerpt/
+excerpt:
+  depth: 1
+  excerpt_excludes: []
+  more_excludes: []
+  hideWholePostExcerpts: true
