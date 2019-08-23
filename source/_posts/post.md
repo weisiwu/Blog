@@ -1,7 +1,7 @@
 ---
 title: post
 date: 2019-08-15 15:29:51
-tags: web
+tags: frontend
 cover: 1.jpg
 ---
 

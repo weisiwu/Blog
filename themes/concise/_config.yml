@@ -4,9 +4,9 @@ url: https://weisiwu.github.io/
 # Header
 menu:
   首页: /
-  web: /tags/web
-  linux: /tags/linux/
-  跑步: /tags/running
+  前端: /tags/frontend
+  os: /tags/linux
+  软件: /tags/software
   关于: /tags/about
 
 # Content
