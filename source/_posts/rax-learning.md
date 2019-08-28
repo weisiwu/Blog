@@ -1,12 +1,10 @@
 ---
-title: rax-learning
+title: rax 学习
 date: 2019-08-20 15:53:59
 tags: frontend
 ---
 
-# rax 学习
-
-rax 是一种 [DSL(domain special language)])(https://www.cnblogs.com/feng9exe/p/10901595.html)  
+rax 是一种 [DSL(domain special language)](https://www.cnblogs.com/feng9exe/p/10901595.html)  
 rax 对自己的定义是 跨容器渲染引擎，所以其实现的能力也会存在容器差异。
 
 rax 里面设置了一些自定义的事件  

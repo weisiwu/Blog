@@ -29,6 +29,8 @@ links:
     url: https://www.zhihu.com/people/wei-si-wu/activities
   - svg: ./source/svg/twitter.svg
     url: https://twitter.com/weisiwu
+  - svg: ./source/svg/codeopen.svg
+    url: https://codepen.io/weisiwu-the-scripter
 
 # github comment 
 git_commit:
