@@ -43,5 +43,4 @@ node_modules
 *.heapsnapshot
 
 # ignore hexo publish output
-/public
 db.json
