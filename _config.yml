@@ -3,12 +3,13 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 🍉草原
+title: 西瓜🍉
+show_title: false
 subtitle:
 description:
 keywords:
-author: weisiwu
-language: CN
+author: 西瓜🍉
+language: zh-CN
 timezone:
 
 # URL
@@ -85,6 +86,29 @@ theme_config:
     bg_image:
       enable: true
       url: /images/background/bk3.jpeg
+  author:
+    avatar:
+      animation:
+      url: /images/avatar/avatar_1.jpeg
+    motto: 悟已往之不谏，知来者之可追
+  social_setting:
+    enable: true
+    icon_only: true
+  social: 
+    github: https://github.com/weisiwu/ || fab fa-github
+    知乎: https://www.zhihu.com/people/wei-si-wu || fab fa-zhihu
+    稀土掘金: https://juejin.cn/user/659362706096526 || origin:掘金
+    Segmentfault: https://segmentfault.com/u/javascriptuser || origin:SF
+    邮箱: mailto:24368874745@qq.com || fa fa-envelope
+    google: 
+    twitter: 
+    youtube:
+  menu:
+    categories: /categories/ || fas fa-layer-group
+    tags: /tags/ || fas fa-tags
+  creative_commons:
+    enable: true
+    sidebar: 
   footer: 
     custom: 
       enable: true
@@ -97,13 +121,33 @@ theme_config:
       since: 2019
       end: 2022
       text: 西瓜🍉
-      author: 
+      author: 西瓜🍉
       beian:
         icp: 
     powered: 
       enable: true
       version: 
-     
+
+# Gittalk
+# See: https://github.com/gitalk/gitalk/
+gitalk:
+  enable: true
+  # Github username.
+  owner: weisiwu
+  # Github repository.
+  repo:  https://github.com/weisiwu/weisiwu.github.io/
+  # Github Application Client ID.
+  client_id: 6ddd32911a0b77477a69
+  # Github Application Client Secret.
+  client_secret: 193be36bda1852234aa121208a53fd82369db3d5
+  # GitHub repo owner and collaborators, only these guys can initialize github issues.
+  admin: ['weisiwu']
+  # Facebook-like distraction free mode.
+  distraction_free_mode: false
+  # Gitalk's display language depends on user's browser or system environment.
+  # If you want everyone visiting your site to see a uniform language, you can set a force language value.
+  # Optional values: en | zh-CN | es-ES | fr | ru | zh-TW
+  language: zh-CN
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
