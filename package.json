@@ -7,7 +7,7 @@
   },
   "scripts": {
     "publish": "hexo g -w",
-    "clean": "hexo clean && hexo s",
+    "clean": "hexo clean && hexo s --port=4001",
     "debug": "hexo server --port=4001"
   },
   "dependencies": {

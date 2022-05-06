@@ -1,5 +1,5 @@
 ---
-title: JS Math.min && Max 小记
+title: JS Math.min Math.max 小记
 date: 2022-04-28 10:19:15
 tags: frontend
 ---

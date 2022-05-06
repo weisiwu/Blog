@@ -127,27 +127,37 @@ theme_config:
     powered: 
       enable: true
       version: 
+  # Gittalk
+  # See: https://github.com/gitalk/gitalk/
+  gitalk:
+    enable: true
+    # Github username.
+    owner: weisiwu
+    # Github repository.
+    repo: weisiwu.github.io
+    # Github Application Client ID.
+    client_id: 6ddd32911a0b77477a69
+    # client_id: Iv1.30a181049e1aba60
+    # Github Application Client Secret.
+    # client_secret: 3e59b07f07c4bc06c9930bcc8476d946621f5a26
+    client_secret: 46b02925c970b5101d38a5da2c122599519423c4
+    # GitHub repo owner and collaborators, only these guys can initialize github issues.
+    admin: weisiwu
+    # Facebook-like distraction free mode.
+    distraction_free_mode: true
+    # Gitalk's display language depends on user's browser or system environment.
+    # If you want everyone visiting your site to see a uniform language, you can set a force language value.
+    # Optional values: en | zh-CN | es-ES | fr | ru | zh-TW
+    language: zh-CN
+  cdn:
+    # See: https://github.com/gitalk/gitalk/, https://github.com/emn178/js-md5/
+    # Example:
+    # gitalk_js: //cdn.jsdelivr.net/npm/gitalk@latest/dist/gitalk.min.js
+    # gitalk_css: //cdn.jsdelivr.net/npm/gitalk@latest/dist/gitalk.css
+    # md5: //cdn.jsdelivr.net/npm/js-md5@latest/src/md5.min.js
+    gitalk_js: https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js
+    gitalk_css: https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css
 
-# Gittalk
-# See: https://github.com/gitalk/gitalk/
-gitalk:
-  enable: true
-  # Github username.
-  owner: weisiwu
-  # Github repository.
-  repo:  https://github.com/weisiwu/weisiwu.github.io/
-  # Github Application Client ID.
-  client_id: 6ddd32911a0b77477a69
-  # Github Application Client Secret.
-  client_secret: 193be36bda1852234aa121208a53fd82369db3d5
-  # GitHub repo owner and collaborators, only these guys can initialize github issues.
-  admin: ['weisiwu']
-  # Facebook-like distraction free mode.
-  distraction_free_mode: false
-  # Gitalk's display language depends on user's browser or system environment.
-  # If you want everyone visiting your site to see a uniform language, you can set a force language value.
-  # Optional values: en | zh-CN | es-ES | fr | ru | zh-TW
-  language: zh-CN
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
