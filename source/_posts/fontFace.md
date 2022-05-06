@@ -2,6 +2,7 @@
 title: font-face 学习
 date: 2019-08-20 17:23:26
 tags: frontend
+category: 前端
 ---
 
 font-face 支持的比较广泛

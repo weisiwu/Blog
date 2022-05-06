@@ -2,6 +2,7 @@
 title: fetch 学习
 date: 2019-08-20 15:53:59
 tags: frontend
+category: 前端
 ---
 
 fetch 提供了对于 Request 和 Response 对象的通用定义。

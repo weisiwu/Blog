@@ -2,6 +2,7 @@
 title: rax 学习
 date: 2019-08-20 15:53:59
 tags: frontend
+category: 前端
 ---
 
 rax 是一种 [DSL(domain special language)](https://www.cnblogs.com/feng9exe/p/10901595.html)  
