@@ -6,13 +6,14 @@ category: linux
 ---
 
 ### 序言
-很多公司都基于git和gerrit，管理代码的提交和评审。研发提交的每次commit一般只包括author/commitor/date/message/hash这些基础信息。
-而commit对应的评审链接则不包含，加大了对相关信息搜寻的工作量。
+很多公司都基于git和gerrit，管理代码的提交和评审。普通commit只包括author/commitor/date/message/hash等基础信息。
+通过git hook可向commit信息中附加更多有用信息，加速定位问题。
+
 ``` shell
 git log --pretty=fuller
 ```
 ![日志信息](../images/git_log_fuller_message.jpg)
-<p style="text-align: center;">git 基础版本log信息</p>
+<p style="text-align: center;">普通commit信息</p>
 
 在向commit message中添加评审相关信息前，首先了解下这些概念:   
 **[commit-ish](https://stackoverflow.com/questions/23303549/what-are-commit-ish-and-tree-ish-in-git)**: 又称commit hash，是用于标识commit的唯一标识符。被定义为由commit内容生成的签名哈希，如果commit自身内容发生变化(ammend/rebase/cherry-pick)，commit-ish值就会发生变化。  
@@ -20,9 +21,9 @@ tips: commit之前的历史发生变化，也会导致commit hash变化，这是
 **[change-id](https://git.eclipse.org/r/Documentation/user-changeid.html)**: 它是由Gerrit生成的hash字符串，通过git hook将其加到commit 
 message中。当用户将commit推送到Gerrit中，系统会自动生成change-id: abc。当推送评审后需要继续改进，用户在本地修改(amend/add new commit)，并重新推送内容。Gerrit 会发现commit-ish发生了变化，但change-id保持不变(值和commit message信息相关)，辨识出本次修改和之前的 change-id: abc 的关联，将其合并成一组，以便评审。  
 
-### 安装&&脚本
-那么，如何将change-id自动加入到commit message中去呢？  
-Gerrit 已经提供了基础的接入方法: [cmd-hook-commit-msg](https://gerrit-review.googlesource.com/Documentation/cmd-hook-commit-msg.html)
+### 通过commit-msg hook修改提交信息
+钩子的使用方式，Gerrit 已经提供接入方法: [cmd-hook-commit-msg](https://gerrit-review.googlesource.com/Documentation/cmd-hook-commit-msg.html)  
+下面是操作记录:  
 
 ``` shell
 # 1. 设置全局模版路径
@@ -62,12 +63,16 @@ chmod a+x ~/.git-templates/hooks/commit-msg
 git init
 ```
 
-### TODO
-1. 上面的脚本存在问题: 合并完分支后，commit link 是错误的
-2. 脚本的自动化不够，编入到一个脚本，一键执行
-3. 和change-id没啥关系，删掉change-id部分
+## 常见git hook
+在git repo目录下.git/hooks中，存放着git运行过程中所有的钩子脚本。
+![git hooks](../images/git_hooks.jpg)
+<p style="text-align: center;">hooks 列表</p>  
+其中以 .sample 结尾的是hooks模板，将结尾的.sample去除并授予文件执行权限即可变成正式的hook。  
+常见hooks的执行时机如下:  
+![hooks timing](../images/commit-hooks.png)  
 
 ### 参考资料
 1. [commit-msg Hook](https://gerrit-review.googlesource.com/Documentation/cmd-hook-commit-msg.html)
 2. [What is the difference between Gerrit Change-ID and Commit SHA-1 in the context git commits?](https://stackoverflow.com/questions/47808154/what-is-the-difference-between-gerrit-change-id-and-commit-sha-1-in-the-context)
 3. [How can I change the default comments in the git commit message?](https://stackoverflow.com/questions/3966714/how-can-i-change-the-default-comments-in-the-git-commit-message)
+4. [Git hooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks)
