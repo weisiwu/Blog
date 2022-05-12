@@ -9,7 +9,7 @@ category: linux
 很多公司都基于git和gerrit，管理代码的提交和评审。普通commit只包括author/commitor/date/message/hash等基础信息。
 通过git hook可向commit信息中附加更多有用信息，加速定位问题。
 
-``` console
+``` bash
 git log --pretty=fuller
 ```
 ![日志信息](../images/git_log_fuller_message.jpg)
@@ -25,7 +25,7 @@ message中。当用户将commit推送到Gerrit中，系统会自动生成change-
 Gerrit 提供的钩子接入方法: [cmd-hook-commit-msg](https://gerrit-review.googlesource.com/Documentation/cmd-hook-commit-msg.html)  
 下面是操作记录:  
 
-``` console
+``` bash
 # 1. 设置全局模版路径
 git config --global init.templatedir '~/.git-templates'
 
@@ -36,7 +36,7 @@ mkdir -p ~/.git-templates/hooks
 touch ~/.git-templates/hooks/commit-msg
 ```
 向 commit-msg 中添加如下内容  
-``` console
+``` bash
 #!/bin/bash
 # 在编辑message阶段，添加上 1) commit初次出现分支名 2) 对应bug链接 3) 对应代码位置
 filter=`sed '/^#.*/d' "$1" | grep -o '#\d\{4,\}'`
@@ -55,7 +55,7 @@ commit_id=$(git rev-parse HEAD)
 echo "[Frist Branch]: $branch_name" >> $1
 ```
 
-``` console
+``` bash
 # 4. 修改文件权限
 chmod a+x ~/.git-templates/hooks/commit-msg
 # 5. 在git repo里面加载对应hooks
