@@ -30,7 +30,7 @@ category: linux
 
 ## 脚本
 
-``` zsh
+``` shell
 #!/bin/zsh
 
 # excludes folders name not match 'xxx_bundle'
