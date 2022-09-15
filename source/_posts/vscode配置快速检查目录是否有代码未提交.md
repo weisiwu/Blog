@@ -44,26 +44,25 @@ do
     pushd $file
     modifies_num=$(git status --short | wc -l)
     if [ $modifies_num -gt 0 ]; then
-      echo $PWD ${modifies_num}
-      # get into node_modules and check modify
-      if [ ! -d node_modules ]; then
-        continue
-      fi
+      echo $PWD $modifies_num
+    fi
+    # get into node_modules and check modify
+    if [ -d node_modules ]; then
       pushd node_modules
       for node_file in $(ls -a | sort)
       do
-        if [ ! -d $node_file -o $node_file = '.' -o $node_file = '..' ]; then
-          continue
+        if [ -d $node_file -a $node_file != '.' -a $node_file != '..' ]; then
+          pushd $node_file
+          node_modifies_num=$(git status --short | wc -l)
+          if [ $node_modifies_num -gt 0 ]; then
+            echo $PWD $node_modifies_num
+          fi
+          popd
         fi
-        pushd $node_file
-        node_modifies_num=$(git status --short | wc -l)
-        if [ $node_modifies_num -gt 0 ]; then
-          echo $PWD ${node_modifies_num}
-        fi
-        popd
       done
       popd
     fi
+    # fi
     popd
   fi
 done
