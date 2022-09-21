@@ -1,24 +1,27 @@
 {
-  "name": "hexo-site",
+  "name": "self_blog",
   "version": "0.0.0",
   "private": true,
   "hexo": {
-    "version": "3.9.0"
+    "version": "6.1.0"
   },
   "scripts": {
-    "publish": "hexo g -w",
-    "debug": "hexo server"
+    "debug": "hexo g && hexo s -p=4001",
+    "clean": "rm -f db.json && cd ./public && rm -rf `ls | grep -v .git` && cd ..",
+    "publish": "npm run clean && hexo g -f",
+    "deploy": "npm run publish && cd ./public && git add . && git commit && git push && cd .."
   },
   "dependencies": {
-    "hexo": "^3.9.0",
-    "hexo-excerpt": "^1.1.4",
+    "hexo": "^6.1.0",
+    "hexo-excerpt": "^1.2.1",
     "hexo-generator-archive": "^0.1.5",
     "hexo-generator-category": "^0.1.3",
     "hexo-generator-index": "^0.2.1",
     "hexo-generator-tag": "^0.2.0",
-    "hexo-renderer-ejs": "^0.3.1",
+    "hexo-renderer-ejs": "^2.0.0",
     "hexo-renderer-less": "^1.0.0",
-    "hexo-renderer-marked": "^1.0.1",
+    "hexo-renderer-marked": "^5.0.0",
+    "hexo-renderer-pug": "^3.0.0",
     "hexo-renderer-stylus": "^0.3.3",
     "hexo-server": "^0.3.3"
   }

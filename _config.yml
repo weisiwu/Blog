@@ -3,12 +3,13 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 卫某人的草原
+title: 西瓜🍉
+show_title: false
 subtitle:
 description:
 keywords:
-author: weisiwu
-language: CN
+author: 西瓜🍉
+language: zh-CN
 timezone:
 
 # URL
@@ -73,7 +74,90 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: concise
+## stun theme: https://github.com/liuyib/hexo-theme-stun
+theme: stun
+## 自定义theme配置: https://hexo.io/docs/configuration.html
+theme_config:
+  enable: true
+  busuanzi: 
+    enable: false
+  header:
+    enable: true
+    bg_image:
+      enable: true
+      url: /images/background/bk3.jpeg
+  author:
+    avatar:
+      animation:
+      url: /images/avatar/avatar_1.jpeg
+    motto: 悟已往之不谏，知来者之可追
+  social_setting:
+    enable: true
+    icon_only: true
+  social: 
+    github: https://github.com/weisiwu/ || fab fa-github
+    知乎: https://www.zhihu.com/people/wei-si-wu || fab fa-zhihu
+    稀土掘金: https://juejin.cn/user/659362706096526 || origin:掘金
+    Segmentfault: https://segmentfault.com/u/javascriptuser || origin:SF
+    邮箱: mailto:24368874745@qq.com || fa fa-envelope
+    google: 
+    twitter: 
+    youtube:
+  menu:
+    categories: /categories/ || fas fa-layer-group
+    tags: /tags/ || fas fa-tags
+  creative_commons:
+    enable: true
+    sidebar: 
+  footer: 
+    custom: 
+      enable: true
+      text: '且随疾风前行，身后亦需留心'
+    icon:
+      enable: true
+      name: 标签test
+    copyright:
+      enable: true
+      since: 2019
+      end: 2022
+      text: 西瓜🍉
+      author: 西瓜🍉
+      beian:
+        icp: 
+    powered: 
+      enable: true
+      version: 
+  # Gittalk
+  # See: https://github.com/gitalk/gitalk/
+  gitalk:
+    enable: true
+    # Github username.
+    owner: weisiwu
+    # Github repository.
+    repo: weisiwu.github.io
+    # Github Application Client ID.
+    client_id: 6ddd32911a0b77477a69
+    # client_id: Iv1.30a181049e1aba60
+    # Github Application Client Secret.
+    # client_secret: 3e59b07f07c4bc06c9930bcc8476d946621f5a26
+    client_secret: 46b02925c970b5101d38a5da2c122599519423c4
+    # GitHub repo owner and collaborators, only these guys can initialize github issues.
+    admin: weisiwu
+    # Facebook-like distraction free mode.
+    distraction_free_mode: true
+    # Gitalk's display language depends on user's browser or system environment.
+    # If you want everyone visiting your site to see a uniform language, you can set a force language value.
+    # Optional values: en | zh-CN | es-ES | fr | ru | zh-TW
+    language: zh-CN
+  cdn:
+    # See: https://github.com/gitalk/gitalk/, https://github.com/emn178/js-md5/
+    # Example:
+    # gitalk_js: //cdn.jsdelivr.net/npm/gitalk@latest/dist/gitalk.min.js
+    # gitalk_css: //cdn.jsdelivr.net/npm/gitalk@latest/dist/gitalk.css
+    # md5: //cdn.jsdelivr.net/npm/js-md5@latest/src/md5.min.js
+    gitalk_js: https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js
+    gitalk_css: https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css
+
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
