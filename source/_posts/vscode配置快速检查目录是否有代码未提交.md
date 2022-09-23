@@ -6,7 +6,7 @@ category: linux
 ---
 
 在vscode中配置了workspace后，一个windows下左侧会有多个库文件夹。
-![workspace左侧fold](../images//vscode-config-check1.jpg)  
+![workspace左侧fold](../images/vscode-config-check1.jpg)  
 有时，需要在多个文件下同时进行修改，有些层级还可能在内部依赖目录中(如node_modules)。在最终提交的时候可能会遗漏部分改动。  
 为了解决这个问题，我给自己写了一个脚本工具~  
 在这里记录一下。  
