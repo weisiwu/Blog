@@ -10,5 +10,7 @@
 1. 生成文档后，进入 ./Blog/public 下  
 2. git 提交修改，并push到远程  
 
-## todolist
-1. 换个好点主题  
+## 文件夹说明
+**public**: 生成的文档存放目录  
+**source**: 原始文稿  
+**themes**: 样式主题  

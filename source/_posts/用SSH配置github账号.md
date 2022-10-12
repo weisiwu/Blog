@@ -2,7 +2,7 @@
 title: 用SSH配置github账号.md
 date: 2022-05-06 11:59:40
 tags: linux
-category: linux
+categories: linux
 ---
 
 ### 简介

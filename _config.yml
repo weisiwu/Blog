@@ -85,11 +85,11 @@ theme_config:
     enable: true
     bg_image:
       enable: true
-      url: /images/background/bk3.jpeg
+      url: /images/header_bk/bk1.png
   author:
     avatar:
       animation:
-      url: /images/avatar/avatar_1.jpeg
+      url: /images/avatar/avatar_1.webp
     motto: 悟已往之不谏，知来者之可追
   social_setting:
     enable: true
@@ -104,8 +104,8 @@ theme_config:
     twitter: 
     youtube:
   menu:
-    categories: /categories/ || fas fa-layer-group
-    tags: /tags/ || fas fa-tags
+    categories: /categories/
+    tags: /tags
   creative_commons:
     enable: true
     sidebar: 

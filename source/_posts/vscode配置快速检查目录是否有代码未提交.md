@@ -2,7 +2,7 @@
 title: vscode配置快速检查目录是否有代码未提交.md
 date: 2022-09-14 20:40:36
 tags: linux
-category: linux
+categories: linux
 ---
 
 在vscode中配置了workspace后，一个windows下左侧会有多个库文件夹。

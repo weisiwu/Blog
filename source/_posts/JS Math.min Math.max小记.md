@@ -2,7 +2,7 @@
 title: JS Math.min Math.max 小记
 date: 2022-04-28 10:19:15
 tags: frontend
-category: 前端
+categories: 前端
 ---
 
 [Math.min](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/min) 和 [Math.max](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/max) 是较为常用的内置工具函数，但你知道这个函数返回值有哪几种情况吗？ 下面就返回的几种情况，结合例子分别说明易错场景。
