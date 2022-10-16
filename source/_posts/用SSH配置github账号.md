@@ -1,6 +1,8 @@
 ---
 title: 用SSH配置github账号.md
 date: 2022-05-06 11:59:40
+excerpt: 设备上有多个git registry 如何配置？
+photos: '../images/ssh_cs_verify.png'
 tags:
 - git
 - linux
@@ -8,6 +10,7 @@ categories:
 - 技术
 ---
 
+<!--more-->
 ### 简介
 ssh是一种网络协议，用于计算机之间的加密登录。  
 在类linux电脑中，提供了按照ssh协议实现的脚本命令。  

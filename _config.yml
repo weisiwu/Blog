@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 西瓜🍉
+title: 西瓜🍉的小站
 show_title: false
 subtitle:
 description:
@@ -129,6 +129,9 @@ theme_config:
       version: 
   # Gittalk
   # See: https://github.com/gitalk/gitalk/
+  # 使用的 newUsedMyBlogComment
+  # https://github.com/settings/applications/2018689
+  # https://cjjkkk.github.io/gitalk/
   gitalk:
     enable: true
     # Github username.
@@ -136,11 +139,11 @@ theme_config:
     # Github repository.
     repo: weisiwu.github.io
     # Github Application Client ID.
-    client_id: 6ddd32911a0b77477a69
+    client_id: 709d1185f3e200e20db4
     # client_id: Iv1.30a181049e1aba60
     # Github Application Client Secret.
     # client_secret: 3e59b07f07c4bc06c9930bcc8476d946621f5a26
-    client_secret: 46b02925c970b5101d38a5da2c122599519423c4
+    client_secret: ce422241f2e98463c823535a7e474e71ae2ab395
     # GitHub repo owner and collaborators, only these guys can initialize github issues.
     admin: weisiwu
     # Facebook-like distraction free mode.

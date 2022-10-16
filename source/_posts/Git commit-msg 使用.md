@@ -1,12 +1,15 @@
 ---
 title: Git commit-msg 使用
 date: 2022-05-10 14:25:20
+excerpt: 利用git hooks，自动格式化commit messages
+photos: '../images/commit-hooks.png'
 tags:
 - git
 categories:
 - 技术
 ---
 
+<!--more-->
 ### 序言
 很多公司都基于git和gerrit，管理代码的提交和评审。普通commit只包括author/commitor/date/message/hash等基础信息。
 通过git hook可向commit信息中附加更多有用信息，加速定位问题。
