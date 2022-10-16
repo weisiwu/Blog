@@ -1,8 +1,10 @@
 ---
 title: Git commit-msg 使用
 date: 2022-05-10 14:25:20
-tags: git
-categories: linux
+tags:
+- git
+categories:
+- 技术
 ---
 
 ### 序言

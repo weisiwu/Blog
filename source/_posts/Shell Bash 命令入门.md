@@ -1,8 +1,10 @@
 ---
 title: Shell Bash 命令入门.md
 date: 2022-05-06 11:59:40
-tags: linux
-categories: linux
+tags:
+- linux
+categories:
+- 技术
 ---
 
 google 搜索 linux shell basic commands 
