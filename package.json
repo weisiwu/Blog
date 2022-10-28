@@ -8,6 +8,7 @@
   "scripts": {
     "hexo:clean": "hexo clean",
     "debug": "hexo g && hexo s -p=4001",
+    "sync": "cd public && git pull && cd .. && git pull",
     "clean": "rm -f db.json && cd ./public && rm -rf `ls | grep -v .git` && cd ..",
     "publish": "npm run clean && hexo g -f",
     "deploy": "npm run publish && cd ./public && git add . && git commit && git push && cd .."
