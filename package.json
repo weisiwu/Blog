@@ -11,7 +11,8 @@
     "sync": "cd public && git pull && cd .. && git pull",
     "clean": "rm -f db.json && cd ./public && rm -rf `ls | grep -v .git` && cd ..",
     "publish": "npm run clean && hexo g -f",
-    "deploy": "npm run publish && cd ./public && git add . && git commit && git push && cd .."
+    "deploy": "npm run publish && cd ./public && git add . && git commit && git push && cd ..",
+    "generate": "TODO: 生成模板文档，用户输入分类、标记，图片默认生成不同的"
   },
   "dependencies": {
     "hexo": "^6.1.0",
