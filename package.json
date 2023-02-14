@@ -1,6 +1,6 @@
 {
-  "name": "self_blog",
-  "version": "0.0.0",
+  "name": "个人博客",
+  "version": "1.0.0",
   "private": true,
   "hexo": {
     "version": "6.1.0"
@@ -12,7 +12,7 @@
     "clean": "rm -f db.json && cd ./public && rm -rf `ls | grep -v .git` && cd ..",
     "publish": "npm run clean && hexo g -f",
     "deploy": "npm run publish && cd ./public && git add . && git commit && git push && cd ..",
-    "generate": "node scripts/generate.js"
+    "tpl": "node scripts/generate.js"
   },
   "dependencies": {
     "hexo": "^6.1.0",
