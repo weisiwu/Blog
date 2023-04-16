@@ -12,9 +12,12 @@
     "clean": "rm -f db.json && cd ./public && rm -rf `ls | grep -v .git` && cd ..",
     "publish": "npm run clean && hexo g -f",
     "deploy": "npm run publish && cd ./public && git add . && git commit && git push && cd ..",
-    "tpl": "node scripts/generate.js"
+    "tpl": "node scripts/generate.js",
+    "d": "node scripts/deployNode.js"
   },
   "dependencies": {
+    "cd": "^0.3.3",
+    "del": "^7.0.0",
     "hexo": "^6.1.0",
     "hexo-excerpt": "^1.2.1",
     "hexo-generator-archive": "^0.1.5",
