@@ -26,19 +26,15 @@ server
         force: true,
       })
       .then(() => {
-        // console.log(`wswTest ${JSON.stringify(11212)}`);
         // git.cwd('./public');
         try {
           git.add('./*');
-          // console.log(`wswTest ${JSON.stringify(12)}`);
           git.commit('Site updated: ' + new Date().toISOString());
-          // console.log(`wswTest ${JSON.stringify(33)}`);
           git.push('origin', 'master');
-          // console.log(`wswTest ${JSON.stringify(44)}`);
           git.cwd('../');
           server.exit();
         } catch (e) {
-          console.log(`wswTest ${JSON.stringify(e)}`);
+          console.log(`Blog push Error: ${JSON.stringify(e)}`);
         }
       });
   });
