@@ -1,24 +1,40 @@
 /** @format */
 
-// /** @format */
+import hexo from 'hexo';
+import { deleteSync as del } from 'del';
+import sgit from 'simple-git';
 
-// const fs = require('fs');
-// import {deleteAsync} from 'del';
-// var cd = require('cd');
+const git = sgit();
 
-// const deletedFilePaths = await deleteAsync(['db.json']);
-// console.log('Deleted files:\n', 'db.json');
-// var dir = new cd('./public');
-// const deletedFilePaths = await deleteAsync(['db.json']);
-// rm -rf `ls | grep -v .git`
-// var dir = new cd('..');
+// del方法无法被require引入，通过加type="module"解决
+// https://stackoverflow.com/questions/69081410/error-err-require-esm-require-of-es-module-not-supported
+// 引入一个新问题，在一个node程序中，如果不同的包使用不同的引入方式，需要怎么处理？
 
-// console.log('Deleted files:\n', deletedFilePaths.join('\n'));
-// console.log('Deleted directories:\n', deletedDirectoryPaths.join('\n'));
+const server = new hexo(process.cwd(), {});
 
-// hexo g -f
-// cd ./public
-// git add .
-// git commit
-// git push
-// cd ..
+function clean() {
+  del(['./db.json', './public/**', '!./public/.git']);
+  return server;
+}
+
+server
+  .init()
+  .then(clean)
+  .then(() => {
+    server
+      .call('generate', {
+        force: true,
+      })
+      .then(() => {
+        // console.log(`wswTest ${JSON.stringify(11212)}`);
+        // git.cwd('./public');
+        git.add('./*');
+        console.log(`wswTest ${JSON.stringify(12)}`);
+        git.commit('Site updated: ' + new Date().toISOString());
+        console.log(`wswTest ${JSON.stringify(33)}`);
+        git.push('origin', 'master');
+        console.log(`wswTest ${JSON.stringify(44)}`);
+        git.cwd('../');
+        server.exit();
+      });
+  });

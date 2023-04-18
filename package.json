@@ -1,10 +1,12 @@
 {
   "name": "个人博客",
   "version": "1.0.0",
+  "type": "module",
   "private": true,
   "hexo": {
     "version": "6.1.0"
   },
+  "main": "index.js",
   "scripts": {
     "hexo:clean": "hexo clean",
     "debug": "hexo g && hexo s -p=4001",
@@ -12,7 +14,7 @@
     "clean": "rm -f db.json && cd ./public && rm -rf `ls | grep -v .git` && cd ..",
     "publish": "npm run clean && hexo g -f",
     "deploy": "npm run publish && cd ./public && git add . && git commit && git push && cd ..",
-    "tpl": "node scripts/generate.js",
+    "tpl": "node generate.js",
     "d": "node scripts/deployNode.js"
   },
   "dependencies": {
@@ -29,6 +31,7 @@
     "hexo-renderer-marked": "^5.0.0",
     "hexo-renderer-pug": "^3.0.0",
     "hexo-renderer-stylus": "^0.3.3",
-    "hexo-server": "^0.3.3"
+    "hexo-server": "^0.3.3",
+    "simple-git": "^3.17.0"
   }
 }
