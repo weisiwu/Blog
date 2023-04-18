@@ -1,3 +1,5 @@
+# @format
+
 # Hexo Configuration
 ## Docs: https://hexo.io/docs/configuration.html
 ## Source: https://github.com/hexojs/hexo/
@@ -44,7 +46,7 @@ highlight:
   line_number: true
   auto_detect: false
   tab_replace:
-  
+
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
 # per_page: Posts displayed per page. (0 = disable pagination)
@@ -53,7 +55,7 @@ index_generator:
   path: ''
   per_page: 10
   order_by: -date
-  
+
 # Category & Tag
 default_category: web
 category_map:
@@ -79,13 +81,18 @@ theme: stun
 ## 自定义theme配置: https://hexo.io/docs/configuration.html
 theme_config:
   enable: true
-  busuanzi: 
+  busuanzi:
     enable: false
   header:
     enable: true
     bg_image:
       enable: true
       url: /images/header_bk/bk1.png
+    banner:
+      # Effective for all pages.
+      enable: true
+      # You can override it by `header_title` in Front-Matter of .md
+      title: 西瓜🍉的小站
   author:
     avatar:
       animation:
@@ -94,23 +101,23 @@ theme_config:
   social_setting:
     enable: true
     icon_only: true
-  social: 
+  social:
     github: https://github.com/weisiwu/ || fab fa-github
     知乎: https://www.zhihu.com/people/wei-si-wu || fab fa-zhihu
     稀土掘金: https://juejin.cn/user/659362706096526 || origin:掘金
     Segmentfault: https://segmentfault.com/u/javascriptuser || origin:SF
     邮箱: mailto:24368874745@qq.com || fa fa-envelope
-    google: 
-    twitter: 
+    google:
+    twitter:
     youtube:
   menu:
     categories: /categories/
     tags: /tags
   creative_commons:
     enable: true
-    sidebar: 
-  footer: 
-    custom: 
+    sidebar:
+  footer:
+    custom:
       enable: true
       text: '且随疾风前行，身后亦需留心'
     icon:
@@ -123,10 +130,10 @@ theme_config:
       text: 西瓜🍉
       author: 西瓜🍉
       beian:
-        icp: 
-    powered: 
+        icp:
+    powered:
       enable: true
-      version: 
+      version:
   # Gittalk
   # See: https://github.com/gitalk/gitalk/
   # 使用的 newUsedMyBlogComment
@@ -160,7 +167,6 @@ theme_config:
     # md5: //cdn.jsdelivr.net/npm/js-md5@latest/src/md5.min.js
     gitalk_js: https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js
     gitalk_css: https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css
-
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
