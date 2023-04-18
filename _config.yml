@@ -93,6 +93,7 @@ theme_config:
       enable: true
       # You can override it by `header_title` in Front-Matter of .md
       title: 西瓜🍉的小站
+      subtitle: ''
   author:
     avatar:
       animation:
