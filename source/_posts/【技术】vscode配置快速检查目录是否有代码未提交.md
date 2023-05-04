@@ -1,5 +1,5 @@
 ---
-title: vscode配置快速检查目录是否有代码未提交.md
+title: vscode配置快速检查目录是否有代码未提交
 date: 2022-09-14 20:40:36
 excerpt: 在vscode上快速检测层层包裹的目录中是否存在未提交代码
 photos: '../images/vscode-config-check3.jpg'

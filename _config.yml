@@ -81,19 +81,36 @@ theme: stun
 ## 自定义theme配置: https://hexo.io/docs/configuration.html
 theme_config:
   enable: true
+  favicon:
+    small: /images/icons/favicon-16x16.jpg
+    medium: /images/icons/favicon-32x32.jpg
   busuanzi:
     enable: false
   header:
     enable: true
+    height: 35%
     bg_image:
       enable: true
-      url: /images/header_bk/bk1.png
+      url: /images/header_bk/bk3.jpg
     banner:
       # Effective for all pages.
       enable: true
       # You can override it by `header_title` in Front-Matter of .md
       title: 西瓜🍉的小站
       subtitle: ''
+  post_meta:
+    word_count:
+      icon: far fa-file-word
+      enable: true
+    reading_time:
+      enable: true
+      icon: far fa-clock
+      # Set reading speed to count reading time.
+      speed:
+        # Reading speed of zh-CN.
+        zh: 200
+        # Reading speed of en-US.
+        en: 80
   author:
     avatar:
       animation:
