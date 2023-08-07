@@ -1,7 +1,0 @@
-TODOLIST
-1、添加轮播插件
-2、样式改版
-3、单条文章，搞简洁点
-5、文章顶部给简介
-    https://fengge.site/2022/07/24/hexo/hexo%E7%BC%96%E8%AF%91%E6%95%85%E9%9A%9C%E6%8E%92%E9%99%A4/
-6、全局loading
