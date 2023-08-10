@@ -7,12 +7,8 @@ https://greatdk.com/
 
 https://www.myfreax.com/
 
-https://www.javatang.com/
-
 https://www.lujun9972.win/blog/2018/12/07/%E4%BD%BF%E7%94%A8rename%E6%89%B9%E9%87%8F%E9%87%8D%E5%91%BD%E5%90%8D%E6%96%87%E4%BB%B6/index.html
 https://www.lujun9972.win/
-
-https://vincentqin.tech/
 
 https://deepzz.com/
 
@@ -54,8 +50,6 @@ https://blog.hclonely.com/
 
 https://tsanfer.com/
 
-https://wiki.eryajf.net/
-
 https://tomotoes.com/
 
 https://www.yunyoujun.cn/
@@ -78,8 +72,6 @@ https://www.yjdzm.com/
 
 https://www.yukicat.net/
 
-https://slbyml.github.io/
-
 https://muzing.top/
 
 https://an.rustfisher.com/
@@ -99,5 +91,3 @@ https://great-jin.github.io/
 https://www.dqzboy.com/
 
 https://www.wangdu.site/
-
-https://www.wangdu.site/course/579.html
