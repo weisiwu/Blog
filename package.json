@@ -1,5 +1,5 @@
 {
-  "name": "个人博客",
+  "name": "Blog",
   "version": "1.0.0",
   "type": "module",
   "private": true,
@@ -34,5 +34,6 @@
     "hexo-server": "^0.3.3",
     "hexo-wordcount": "^6.0.1",
     "simple-git": "^3.17.0"
-  }
+  },
+  "repository": "git@github.com:weisiwu/Blog.git"
 }
