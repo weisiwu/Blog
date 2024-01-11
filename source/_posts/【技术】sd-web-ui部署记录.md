@@ -309,3 +309,6 @@ Downloading: "https://huggingface.co/h94/IP-Adapter/resolve/main/models/image_en
         raise URLError(err)
     urllib.error.URLError: <urlopen error [Errno 101] Network is unreachable>
 
+
+调用chatgpt api(gpt-4)时，返回的回答一直是中文，但同样的prompt在web界面调用，返回的一直为英文
+prompt: https://raw.githubusercontent.com/weisiwu/novel_test/main/documents/sd_prompt_generate.prompt
