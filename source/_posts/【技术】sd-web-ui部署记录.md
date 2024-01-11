@@ -310,6 +310,35 @@ Downloading: "https://huggingface.co/h94/IP-Adapter/resolve/main/models/image_en
     urllib.error.URLError: <urlopen error [Errno 101] Network is unreachable>
 
 
+## chatgpt 部署尝试
+调用chatgpt api(gpt-4)时，返回的回答一直是中文，但同样的prompt在web界面调用，返回的一直为英文
+prompt: https://raw.githubusercontent.com/weisiwu/novel_test/main/documents/sd_prompt_generate.prompt
+
+调用的时候分成了多次的 conversation
+```
+def conversation(messages, model="gpt-4"):
+    stream = openai.chat.completions.create(
+        model=model,
+        messages=messages,
+        stream=True,
+    )
+```
+错误的调用方式:
+```
+messages=[{'role': 'system', 'content': ''}]
+messages=[{'role': 'user', 'content': ''}]
+messages=[{'role': 'user', 'content': ''}]
+```
+正确的调用方式
+```
+messages=[
+  {'role': 'system', 'content': ''},
+  {'role': 'user', 'content': ''},
+  {'role': 'user', 'content': ''},
+]
+```
+
+## colab部署尝试
 由于阿里云的PAI-DSW仅是用于训练模型的，不能对外提供api使用。寻找替代访问
 沟通的工单内容
 https://smartservice.console.aliyun.com/service/chat?id=0002HASYMX
