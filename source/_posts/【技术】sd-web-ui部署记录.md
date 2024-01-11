@@ -309,3 +309,11 @@ Downloading: "https://huggingface.co/h94/IP-Adapter/resolve/main/models/image_en
         raise URLError(err)
     urllib.error.URLError: <urlopen error [Errno 101] Network is unreachable>
 
+
+由于阿里云的PAI-DSW仅是用于训练模型的，不能对外提供api使用。寻找替代访问
+沟通的工单内容
+https://smartservice.console.aliyun.com/service/chat?id=0002HASYMX
+colab
+https://github.com/AUTOMATIC1111/stable-diffusion-webui/discussions/4561
+发现colab可以部署，但是不允许以API形式启动，如果发现违规，那么会将实例释放，释放后，下载的代码和训练的物料都互小时。
+另非plus实例最多保存12小时
