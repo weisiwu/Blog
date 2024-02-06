@@ -19,7 +19,7 @@ categories:
 
 <video id="video" controls="" preload="none" >
   <source id="mp4" src="../images/stc_demo.mov" type="video/mp4">
-</videos>
+</video>
 
 # 安装
 下面来简单介绍下，在安装部署screenshot-to-code过程中可能遇到的问题。将分成两个部分来入手介绍。
