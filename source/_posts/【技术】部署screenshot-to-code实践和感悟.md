@@ -15,7 +15,8 @@ categories:
 
 ![Alt text](../images/stc_3.png)
 
-**使用效果可以看这个视频**
+**使用效果可以看这个视频**  
+
 <video id="video" controls="" preload="none" >
   <source id="mp4" src="../images/stc_demo.mov" type="video/mp4">
 </videos>
