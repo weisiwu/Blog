@@ -18,7 +18,7 @@ categories:
 **使用效果可以看这个视频**  
 
 <video id="video" controls="" preload="none" >
-  <source id="mp4" src="../images/stc_demo.mov" type="video/mp4">
+  <source id="mp4" src="../images/stc_demo.mp4" type="video/mp4">
 </video>
 
 # 安装
