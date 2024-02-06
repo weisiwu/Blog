@@ -77,6 +77,7 @@ pagination_dir: page
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 ## stun theme: https://github.com/liuyib/hexo-theme-stun
+## stun 自己扩展: https://github.com/weisiwu/hexo-theme-stun
 theme: stun
 ## 自定义theme配置: https://hexo.io/docs/configuration.html
 theme_config:
