@@ -3,4 +3,4 @@
 	url = git@github.com:weisiwu/weisiwu.github.io.git
 [submodule "stun"]
 	path = themes/stun
-	url = git@github.com:liuyib/hexo-theme-stun.git
+	url = git@github.com:weisiwu/hexo-theme-stun.git

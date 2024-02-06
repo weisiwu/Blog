@@ -11,7 +11,7 @@ categories:
 <!-- @format -->
 [screenshot-to-code](https://github.com/abi/screenshot-to-code) 是近期在github上很火的GPT衍生项目，其提供web界面去调用GPT-vision接口，进行图生代码的转换。  
 在这基础上，还做了前端框架融合（生成的代码使用`tailwindcss`）、server服务集成（代码在[backend文件夹](https://github.com/abi/screenshot-to-code/tree/main/backend)中）。  
-在上线两个月后，star数达到了3.1万，热度很高，AI的风潮确实十分的强劲。  
+在上线两个月后，star数达到了3.1万，热度很高，AI的风潮确实十分强劲。  
 
 ![Alt text](../images/stc_3.png)
 
