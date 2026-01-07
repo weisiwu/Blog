@@ -8,17 +8,13 @@
   },
   "main": "index.js",
   "scripts": {
-    "hexo:clean": "hexo clean",
-    "debug": "hexo g && hexo s -p=4001",
-    "dev": "npm run debug",
-    "serve": "hexo s -p=4001",
-    "sync": "git -C public pull && git pull",
-    "clean": "node -e \"const fs=require('fs'); const path=require('path'); const root=process.cwd(); const db=path.join(root,'db.json'); if(fs.existsSync(db)) fs.rmSync(db,{force:true}); const pub=path.join(root,'public'); if(fs.existsSync(pub)){ for(const name of fs.readdirSync(pub)){ if(name==='.git') continue; fs.rmSync(path.join(pub,name),{recursive:true,force:true}); } }\"",
-    "publish": "npm run clean && hexo g -f",
-    "build": "npm run publish",
-    "deploy": "npm run publish && git -C public add . && git -C public commit -m \"deploy\" && git -C public push",
-    "tpl": "node generate.js",
-    "gf": "hexo g -f"
+    "clean": "hexo clean",
+    "generate": "hexo generate",
+    "generate:force": "hexo generate -f",
+    "build": "npm run clean && npm run generate:force",
+    "serve": "hexo server -p=4001",
+    "dev": "hexo server -p=4001 -g",
+    "tpl": "node generate.js"
   },
   "engines": {
     "node": ">=22"
